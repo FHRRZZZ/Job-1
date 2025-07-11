@@ -1,162 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <title>Profile</title>
-    <style>
-        #carousel::-webkit-scrollbar {
-        display: none;
-        }
-        #carousel {
-        -ms-overflow-style: none;  /* IE & Edge */
-        scrollbar-width: none;     /* Firefox */
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <title>Profile</title>
+  <style>
+    #carousel::-webkit-scrollbar {
+      display: none;
+    }
+    #carousel {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Aktifkan hover-style juga saat di-tap (mobile) */
+    .group.active .group-hover\:scale-110 {
+      transform: scale(1.10);
+    }
+    .group.active .group-hover\:opacity-100 {
+      opacity: 1 !important;
+    }
+  </style>
 </head>
-<body>
-        <div class="bg-blue-600 text-white p-4 flex justify-between items-center">
-            <div class="flex items-center">
-                <h1 class="text-3xl font-bold">Oktavia's</h1>
-            </div>
-            <ul>
-                <li class="flex space-x-4">
-                    <a href="#home" class="hover:underline">Beranda</a>
-                    <a href="#about" class="hover:underline">Tentang</a>
-                    <a href="#kelas" class="hover:underline">Kelas</a>
-                </li>
-            </ul>
+<body class="bg-white">
+  <div class="bg-blue-600 text-white p-4 flex justify-between items-center">
+    <div class="flex items-center">
+      <h1 class="text-3xl font-bold">Oktavia's</h1>
+    </div>
+    <ul>
+      <li class="flex space-x-4">
+        <a href="#home" class="hover:underline">Beranda</a>
+        <a href="#about" class="hover:underline">Tentang</a>
+        <a href="#kelas" class="hover:underline">Kelas</a>
+      </li>
+    </ul>
+  </div>
+  <section id="home">
+    <div class="p-4 mt-10 flex flex-col lg:flex-row justify-center items-center gap-10">
+      <img src="f-removebg-preview.png" alt="Logo kiri" class="w-40 md:w-60 lg:w-62 h-auto" />
+      <div class="text-center max-w-lg">
+        <h1 class="text-3xl font-bold text-transparent bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text">Selamat Datang di Kelas Oktavia</h1>
+        <p class="text-lg mt-4 text-transparent bg-gradient-to-l from-blue-400 to-blue-300 bg-clip-text">Temukan pengalaman belajar yang menyenangkan dan penuh inspirasi bersama saya, Tri Ariani Oktavia. Mari kita kembangkan potensi, kreativitas, dan rasa ingin tahu dalam suasana kelas yang hangat dan suportif.</p>
+      </div>
+      <img src="d54f6054-35c2-4d01-aea7-fb2fde2ff895_removalai_preview.png" alt="Logo kanan" class="w-40 md:w-60 lg:w-72 h-auto" />
+    </div>
+  </section>
+  <section id="about">
+    <h1 class="mt-10 text-4xl font-bold text-center underline decoration-blue-600 decoration-2 underline-offset-4 bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">Tentang</h1>
+    <div class="bg-gradient-to-r from-blue-400 to-blue-500 p-6 mt-10 flex flex-col-reverse md:flex-row justify-center items-center gap-10 md:gap-40">
+      <p class="text-white text-center md:text-left max-w-md" data-aos="fade-left" data-aos-duration="1000">Perkenalkan, nama saya Tri Ariani Oktavia, guru kelas 4 di SD Negeri 15 Gantung. Saya sangat antusias untuk berbagi ilmu dan pengalaman dengan para siswa. Mari kita belajar bersama dan tumbuh menjadi pribadi yang lebih baik!</p>
+      <div class="bg-white p-2 rounded-full" data-aos="fade-right" data-aos-duration="1000">
+        <img src="Gambar_WhatsApp_2025-07-11_pukul_21.01.07_9a29dc56-removebg-preview.png" alt="" class="w-52 md:w-72 rounded-full bg-blue-500" />
+      </div>
+    </div>
+  </section>
+  <section id="kelas">
+    <h1 class="mt-10 text-4xl font-bold text-center underline decoration-blue-600 decoration-2 underline-offset-4 bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">Kelas</h1>
+    <div class="relative overflow-x-auto w-full max-w-4xl mx-auto mt-10 bg-blue-200 p-5 rounded-lg shadow-md">
+      <div id="carousel" class="flex gap-5 items-center scroll-smooth snap-x snap-mandatory overflow-x-scroll">
+        <img src="1.jpg" alt="Slide 1" class="w-60 h-40 object-cover rounded-md flex-shrink-0 snap-start" />
+        <img src="2.jpg" alt="Slide 2" class="w-60 h-40 object-cover rounded-md flex-shrink-0 snap-start" />
+        <img src="3.jpg" alt="Slide 3" class="w-60 h-40 object-cover rounded-md flex-shrink-0 snap-start" />
+        <img src="4.jpg" alt="Slide 4" class="w-60 h-40 object-cover rounded-md flex-shrink-0 snap-start" />
+        <img src="5.jpg" alt="Slide 5" class="w-60 h-40 object-cover rounded-md flex-shrink-0 snap-start" />
+      </div>
+    </div>
+    <div class="mt-10 max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6 bg-[#051d44]">
+      <div class="relative group overflow-hidden rounded-lg shadow-lg cursor-pointer">
+        <img src="a.jpg" alt="Anna" class="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-110" />
+        <div class="absolute inset-0 bg-[rgba(0,0,0,0.25)] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div class="absolute bottom-0 left-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h3 class="text-lg font-semibold">Kegiatan 1</h3>
+          <p class="text-sm">Menghubungkan gambar</p>
         </div>
-        <section id="home">
-            <div class="p-4 mt-10 flex flex-col lg:flex-row justify-center items-center gap-10">
-            <img src="f-removebg-preview.png" alt="Logo kiri" class="w-40 md:w-60 lg:w-62 h-auto" />
-            <div class="text-center max-w-lg">
-                <h1 class="text-3xl font-bold text-transparent bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text">Selamat Datang di Kelas Oktavia</h1>
-                <p class="text-lg mt-4 text-transparent bg-gradient-to-l from-blue-400 to-blue-300 bg-clip-text">Temukan pengalaman belajar yang menyenangkan dan penuh inspirasi bersama saya, Tri Ariani Oktavia. Mari kita kembangkan potensi, kreativitas, dan rasa ingin tahu dalam suasana kelas yang hangat dan suportif.</p>
-            </div>
-            <img src="d54f6054-35c2-4d01-aea7-fb2fde2ff895_removalai_preview.png" alt="Logo kanan" class="w-40 md:w-60 lg:w-72 h-auto" />
-            </div>
-        </section>
-        <section id="about">
-            <h1 class=" mt-10 text-4xl font-bold text-center underline decoration-blue-600 decoration-2 underline-offset-4 bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">Tentang</h1>
-            <div class="bg-gradient-to-r from-blue-400 to-blue-500 p-4 mt-10 flex justify-center gap-40 items-center">
-                <p class="max-w-sm ml-10 text-white" data-aos="fade-left" data-aos-duration="1000">Perkenalkan, nama saya Tri Ariani Oktavia, guru kelas 4 di SD Negeri 15 Gantung. Saya sangat antusias untuk berbagi ilmu dan pengalaman dengan para siswa. Mari kita belajar bersama dan tumbuh menjadi pribadi yang lebih baik!"</p>
-                <div class="bg-white p-2 rounded-[50%]" data-aos="fade-right" data-aos-duration="1000">
-                    <img src="Gambar_WhatsApp_2025-07-11_pukul_21.01.07_9a29dc56-removebg-preview.png" alt="" width="300" class="rounded-[50%] bg-blue-500" data-aos="fade-right" data-aos-duration="1000">
-                </div>
-            </div>
-        </section>
-        <section id="kelas">
-            <h1 class=" mt-10 text-4xl font-bold text-center underline decoration-blue-600 decoration-2 underline-offset-4 bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">Kelas</h1>
-            <div class="relative overflow-x-auto w-full max-w-4xl mx-auto mt-10 bg-blue-200 p-5 rounded-lg shadow-md">
-                    <div id="carousel" class="flex gap-5 items-center scroll-smooth snap-x snap-mandatory overflow-x-scroll">
-                    <img src="1.jpg" alt="Slide 1" class="w-60 h-40 object-cover rounded-md flex-shrink-0 snap-start" />
-                    <img src="2.jpg" alt="Slide 2" class="w-60 h-40 object-cover rounded-md flex-shrink-0 snap-start" />
-                    <img src="3.jpg" alt="Slide 3" class="w-60 h-40 object-cover rounded-md flex-shrink-0 snap-start" />
-                    <img src="4.jpg" alt="Slide 4" class="w-60 h-40 object-cover rounded-md flex-shrink-0 snap-start" />
-                    <img src="5.jpg" alt="Slide 5" class="w-60 h-40 object-cover rounded-md flex-shrink-0 snap-start" />
-                </div>
-            </div>
-            <div class="mt-10 max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6 bg-[#051d44]">
-                <div class="relative group overflow-hidden rounded-lg shadow-lg cursor-pointer">
-                    <img src="a.jpg" alt="Anna" class="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-110" />
-                    <div class="absolute inset-0 bg-[rgba(0,0,0,0.25)] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <div class="absolute bottom-0 left-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <h3 class="text-lg font-semibold">Kegiatan 1</h3>
-                        <p class="text-sm">Menghubungkan gambar</p>
-                    </div>
-                    <div class="absolute top-4 right-4 text-white text-xl opacity-0 group-hover:opacity-100 transition duration-300">
-                        &rsaquo;
-                    </div>
-                </div>
-                <div class="relative group overflow-hidden rounded-lg shadow-lg cursor-pointer">
-                    <img src="b.jpg" alt="Ben" class="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-110" />
-                    <div class="absolute inset-0 bg-[rgba(0,0,0,0.25)] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <div class="absolute bottom-0 left-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <h3 class="text-lg font-semibold">Kegiatan 2</h3>
-                        <p class="text-sm">Mencocokan Gambar</p>
-                    </div>
-                    <div class="absolute top-4 right-4 text-white text-xl opacity-0 group-hover:opacity-100 transition duration-300">
-                        &rsaquo;
-                    </div>
-                </div>
-                <div class="relative group overflow-hidden rounded-lg shadow-lg cursor-pointer">
-                    <img src="c.jpg" alt="Ben" class="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-110" />
-                    <div class="absolute inset-0 bg-[rgba(0,0,0,0.25)] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <div class="absolute bottom-0 left-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <h3 class="text-lg font-semibold">Kegiatan 3</h3>
-                        <p class="text-sm">Mencocokan Gambar</p>
-                    </div>
-                    <div class="absolute top-4 right-4 text-white text-xl opacity-0 group-hover:opacity-100 transition duration-300">
-                        &rsaquo;
-                    </div>
-                </div>
-                <div class="relative group overflow-hidden rounded-lg shadow-lg cursor-pointer">
-                    <img src="d.jpg" alt="Ben" class="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-110" />
-                    <div class="absolute inset-0 bg-[rgba(0,0,0,0.25)] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <div class="absolute bottom-0 left-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <h3 class="text-lg font-semibold">Kegiatan 4</h3>
-                        <p class="text-sm">Menghubungkan Gambar</p>
-                    </div>
-                    <div class="absolute top-4 right-4 text-white text-xl opacity-0 group-hover:opacity-100 transition duration-300">
-                        &rsaquo;
-                    </div>
-                </div>
-                <div class="relative group overflow-hidden rounded-lg shadow-lg cursor-pointer">
-                    <img src="e.jpg" alt="Ben" class="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-110" />
-                    <div class="absolute inset-0 bg-[rgba(0,0,0,0.25)] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <div class="absolute bottom-0 left-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <h3 class="text-lg font-semibold">Kegiatan 5</h3>
-                        <p class="text-sm">Menggambar</p>
-                    </div>
-                    <div class="absolute top-4 right-4 text-white text-xl opacity-0 group-hover:opacity-100 transition duration-300">
-                        &rsaquo;
-                    </div>
-                </div>
-                <div class="relative group overflow-hidden rounded-lg shadow-lg cursor-pointer">
-                    <img src="f.jpg" alt="Ben" class="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-110" />
-                    <div class="absolute inset-0 bg-[rgba(0,0,0,0.25)] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <div class="absolute bottom-0 left-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <h3 class="text-lg font-semibold">Kegiatan 6</h3>
-                        <p class="text-sm">Menyelesaikan quiz</p>
-                    </div>
-                    <div class="absolute top-4 right-4 text-white text-xl opacity-0 group-hover:opacity-100 transition duration-300">
-                        &rsaquo;
-                    </div>
-                </div>
-            </div>
-        </section>
-    <footer class="p-10 mt-20 text-center bg-gradient-to-l from-blue-300 to-blue-500 font-bold text-white">
-        <div class="flex justify-center items-center gap-10 mb-4">
-            <a href="https://wa.me/628123456789" target="_blank" aria-label="WhatsApp" class="hover:opacity-75 text-white text-2xl">
-            <i class="fab fa-whatsapp"></i>
-            </a>
-            <a href="https://instagram.com/username" target="_blank" aria-label="Instagram" class="hover:opacity-75 text-white text-2xl">
-            <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://facebook.com/username" target="_blank" aria-label="Facebook" class="hover:opacity-75 text-white text-2xl">
-            <i class="fab fa-facebook"></i>
-            </a>
+        <div class="absolute top-4 right-4 text-white text-xl opacity-0 group-hover:opacity-100 transition duration-300">
+          &rsaquo;
         </div>
-        © 2025 Fhrrzz | Powered by Tailwind CSS
-    </footer>
-    <script>
-        AOS.init();
+      </div>
+      <div class="relative group overflow-hidden rounded-lg shadow-lg cursor-pointer">
+        <img src="b.jpg" alt="Anna" class="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-110" />
+        <div class="absolute inset-0 bg-[rgba(0,0,0,0.25)] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div class="absolute bottom-0 left-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h3 class="text-lg font-semibold">Kegiatan 1</h3>
+          <p class="text-sm">Menghubungkan gambar</p>
+        </div>
+        <div class="absolute top-4 right-4 text-white text-xl opacity-0 group-hover:opacity-100 transition duration-300">
+          &rsaquo;
+        </div>
+      </div>
+      <div class="relative group overflow-hidden rounded-lg shadow-lg cursor-pointer">
+        <img src="c.jpg" alt="Anna" class="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-110" />
+        <div class="absolute inset-0 bg-[rgba(0,0,0,0.25)] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div class="absolute bottom-0 left-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h3 class="text-lg font-semibold">Kegiatan 1</h3>
+          <p class="text-sm">Menghubungkan gambar</p>
+        </div>
+        <div class="absolute top-4 right-4 text-white text-xl opacity-0 group-hover:opacity-100 transition duration-300">
+          &rsaquo;
+        </div>
+      </div>
+      <div class="relative group overflow-hidden rounded-lg shadow-lg cursor-pointer">
+        <img src="d.jpg" alt="Anna" class="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-110" />
+        <div class="absolute inset-0 bg-[rgba(0,0,0,0.25)] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div class="absolute bottom-0 left-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h3 class="text-lg font-semibold">Kegiatan 1</h3>
+          <p class="text-sm">Menghubungkan gambar</p>
+        </div>
+        <div class="absolute top-4 right-4 text-white text-xl opacity-0 group-hover:opacity-100 transition duration-300">
+          &rsaquo;
+        </div>
+      </div>
+      <div class="relative group overflow-hidden rounded-lg shadow-lg cursor-pointer">
+        <img src="e.jpg" alt="Anna" class="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-110" />
+        <div class="absolute inset-0 bg-[rgba(0,0,0,0.25)] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div class="absolute bottom-0 left-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h3 class="text-lg font-semibold">Kegiatan 1</h3>
+          <p class="text-sm">Menghubungkan gambar</p>
+        </div>
+        <div class="absolute top-4 right-4 text-white text-xl opacity-0 group-hover:opacity-100 transition duration-300">
+          &rsaquo;
+        </div>
+      </div>
+      <div class="relative group overflow-hidden rounded-lg shadow-lg cursor-pointer">
+        <img src="f.jpg" alt="Anna" class="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-110" />
+        <div class="absolute inset-0 bg-[rgba(0,0,0,0.25)] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div class="absolute bottom-0 left-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h3 class="text-lg font-semibold">Kegiatan 1</h3>
+          <p class="text-sm">Menghubungkan gambar</p>
+        </div>
+        <div class="absolute top-4 right-4 text-white text-xl opacity-0 group-hover:opacity-100 transition duration-300">
+          &rsaquo;
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="p-10 mt-20 text-center bg-gradient-to-l from-blue-300 to-blue-500 font-bold text-white">
+    <div class="flex justify-center items-center gap-10 mb-4">
+      <a href="https://wa.me/628123456789" target="_blank" aria-label="WhatsApp" class="hover:opacity-75 text-white text-2xl">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="https://instagram.com/username" target="_blank" aria-label="Instagram" class="hover:opacity-75 text-white text-2xl">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://facebook.com/username" target="_blank" aria-label="Facebook" class="hover:opacity-75 text-white text-2xl">
+        <i class="fab fa-facebook"></i>
+      </a>
+    </div>
+    © 2025 Fhrrzz | Powered by Tailwind CSS
+  </footer>
+  <script>
+    AOS.init();
+
     const carousel = document.getElementById("carousel");
     let index = 0;
-
     const scrollNext = () => {
       const items = carousel.children;
       index = (index + 1) % items.length;
       const scrollTo = items[index].offsetLeft;
-      carousel.scrollTo({ left: scrollTo, behavior: 'smooth' });
+      carousel.scrollTo({ left: scrollTo, behavior: "smooth" });
     };
-
     setInterval(scrollNext, 2500);
-    </script>
+
+    document.querySelectorAll(".group").forEach((card) => {
+      card.addEventListener("click", () => {
+        card.classList.toggle("active");
+      });
+    });
+  </script>
 </body>
 </html>
